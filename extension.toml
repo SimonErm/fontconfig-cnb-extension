@@ -9,6 +9,9 @@ name = "Fontconfig Extension"
 homepage = "https://github.com/SimonErm/fontconfig-cnb-extension"
 description = "A simple cnb extension that installs fontconfig on the runtime base image if the pom contains jasperreports"
 
+[metadata]
+include-files = ["bin/generate", "bin/detect", "extension.toml"]
+
 [[targets]]
 os = "linux"
 
