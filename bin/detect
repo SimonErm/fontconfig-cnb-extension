@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -eo pipefail
+
+if ! grep -q jasperreports "pom.xml"; then
+    exit 100
+fi
+
+# 1. GET ARGS
+plan_path=$CNB_BUILD_PLAN_PATH
+
+# 2. DECLARE DEPENDENCIES (OPTIONAL)
+cat >> "${plan_path}" <<EOL
+# Extension provides this dependency
+[[provides]]
+name = "fontconfig"
+EOL

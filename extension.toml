@@ -1,0 +1,16 @@
+# Buildpack API version
+api = "0.10"
+
+# Extension ID and metadata
+[extension]
+id = "simonerm/fontconfig-cnb-extension"
+version = "0.0.1"
+name = "Fontconfig Extension"
+homepage = "https://github.com/SimonErm/fontconfig-cnb-extension"
+description = "A simple cnb extension that installs fontconfig on the runtime base image if the pom contains jasperreports"
+
+[[targets]]
+os = "linux"
+
+[[targets.distros]]
+name = "ubuntu"
